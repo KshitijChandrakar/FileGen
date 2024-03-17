@@ -4,7 +4,7 @@ from tensorflow.keras.layers import LSTM, Dense
 from tensorflow.keras.models import Sequential
 
 # Example string
-N = "dhvbjkclsvblkbvdkjbvlsajkbvksbdjvbkshjbvkhsbvbkslviuwehvnbhfuoivsiubvuhjvdlsjiklbkdsviusavdjlbjkslvbhdyoibulvubaoslivbsvuyvbysvbuvsb"
+N = "dhvbjkclsvblkbvdkjbv,.lsajkbvksbdjvbkshjbvkhsbvbkslviuwehvnbhfuoivsiubvuhjvdlsjiklbkdsviusavdjlbjkslvbhdyoibulvubaoslivbsvuyvbysvbuvsb"
 sequence_length = 10  # Length of substrings
 num_samples = len(N) - sequence_length  # Number of samples
 

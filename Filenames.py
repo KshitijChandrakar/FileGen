@@ -2,7 +2,7 @@ import os
 def generateFilename(filename):
     base, ext = os.path.splitext(filename)
     counter = 1
-    new_filename = filename
+    new_filename = f"{base}0{ext}"
     while os.path.exists(new_filename):
         new_filename = f"{base}{counter}{ext}"
         counter += 1
