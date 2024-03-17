@@ -24,4 +24,5 @@ def genData(N = -1, inputSize = 10):
     num_chars = poolSize
     x_train = np.array([[char_to_index[char] for char in substring] for substring in X])
     y_train = np.array([char_to_index[char] for char in Y])
-    return x_train, y_train, poolSize, pool, X, Y, DataDetails, inputSize, N, fileData
+    dataEncoded = np.array([char_to_index[substring] for substring in fileData])
+    return x_train, y_train, poolSize, pool, X, Y, DataDetails, inputSize, N, dataEncoded

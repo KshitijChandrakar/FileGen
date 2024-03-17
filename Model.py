@@ -4,7 +4,7 @@ import numpy as np
 from os import getcwd as cwd
 from MyFunctions import *
 # Read the dictionary from the file
-x_train, y_train, poolSize, pool, X, Y, DataDetails, inputSize, N = genData()
+x_train, y_train, poolSize, pool, X, Y, DataDetails, inputSize, N, Data = genData()
 # printData()
 def printData():
     for i in range(len(x_train)):
@@ -16,5 +16,5 @@ model = tf.keras.models.Sequential([
 ])
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit(x_train, y_train, epochs=500)
+model.fit(x_train, y_train, epochs=1000)
 model.save(cwd() + '/' + generateFilename('NN.keras'))
